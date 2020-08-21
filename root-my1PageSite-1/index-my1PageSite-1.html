@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calin Cionca - One Page</title>
+        <meta name="My One Page Site" content="My One Page Site">
+        <meta name="Author" content="Calin Cionca">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style-my1PageSite-1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body onscroll="toggleTopBtn()">
+        <div id="wrapper">
+            <header>
+                <div class="logo">
+                    <a href="#" id="home">Calin Cionca</a>
+                </div>
+                <form class="searchBar" method="post">
+                    <label for="search">Search</label>
+                    <input type="text" id="search" name="search" placeholder="Search.." title="Search"/>
+                    <button type="submit" class="srcBtn" accesskey="s"><i class="fa fa-search"></i></button>
+                </form>
+                <nav id="mainMenu">
+                    <ul class="mainLinks">
+                        <li class="home"><a href="#" onclick="showPage()">HOME</a></li>
+                        <li class="portfolio"><a href="#projects" onclick="showPage()">PORTFOLIO</a></li>
+                        <li class="contact"><a href="#contact" onclick="showPage()">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <h1 class="title">Junior Front-End Web Developer</h1>
+                <img class="mainPic" src="images/code-1.jpg" alt="code"/>
+                
+                <p>Hi, welcome to my website!</p>
+                <ul>
+                    <li>I designed and developed this responsive single page website, and all the projects featured in the <a href="#projects">Projects</a> section below, to showcase my web development skills.</li>
+                    <li>I used RWD, HTML5, CSS3, Flexbox, and Vanilla JavaScript.</li>
+                    <li>I use a "less is more" approach to designing and coding.</li>
+                    <li>See information <a href="https://www.linkedin.com/in/calin-cionca/" accesskey="l">about</a> me, and <a id="contact" href="mailto:calincionca35@gmail.com">contact</a> me with any questions or comments.</li>
+                </ul>
+                
+                <h3 id="projects">PROJECTS</h3>
+                <article id="cardsWrapper">
+                    <div id="card1" class="card">
+<!--                        <img src="https://via.placeholder.com/260X150">-->
+                        <a href="http://htmlpreview.github.io/?https://github.com/calincionca35/Coming-Soon-Page/blob/master/root-coming-soon-1/index-coming-soon-1.html"><img src="./images/Coming-Soon-Page-1-260-150.gif" alt="Coming Soon Page"/></a>
+                        <h2>Coming Soon Page</h2>
+                        <ul>
+                            <li>Website pre-launch page</li>
+                            <li>Built with HTML5, CSS3, Flexbox and Vanilla JavaScript</li>
+                            <li>Provides user with next step feedback after e-mail submission</li>
+                        </ul>
+                        <a href="https://github.com/calincionca35/Coming-Soon-Page">More</a>
+                    </div>
+                    <div id="card2" class="card">
+<!--                        <img src="https://via.placeholder.com/260X150">-->
+                        <a href="http://htmlpreview.github.io/?https://github.com/calincionca35/Create-Account-Form/blob/master/Create%20Account%20Form-1.html"><img src="./images/Create-Account-Form-1-260-150.jpg" alt="Create Account Form"/></a>
+                        <h2>Create Account Form</h2>
+                        <ul>
+                            <li>Customizable Create Account form</li>
+                            <li>Designed with common business needs in mind to assist user with account creation</li>
+                            <li>Uses flat UI design, requesting only necessary information to increase completion rate</li>
+                        </ul>
+                        <a href="https://github.com/calincionca35/Create-Account-Form">More</a>
+                    </div>
+                    <div id="card3" class="card">
+<!--                        <img src="https://via.placeholder.com/260X150">-->
+                        <a href="http://htmlpreview.github.io/?https://github.com/calincionca35/Coming-Soon-Page-Dark/blob/master/root-coming-soon-dark-1/index-coming-soon-dark-1.html"><img src="./images/Coming-Soon-Page-Dark-1-260-150.jpg" alt="Coming Soon Page Dark"/></a>
+                        <h2>Coming Soon Page Dark</h2>
+                        <ul>
+                            <li>Designed for website pre-launch</li>
+                            <li>The "noir" version of the Coming Soon Page project; it simply inverts the color theme</li>
+                            <li>Built with HTML5, CSS3, Flexbox and Vanilla JavaScript</li>
+                        </ul>
+                        <a href="https://github.com/calincionca35/Coming-Soon-Page-Dark">More</a>
+                    </div>
+                </article>
+                <p>Additional projects on <a href="https://github.com/calincionca35" accesskey="g">GitHub</a></p>
+                <button id="toTop" onclick="toTop()" title="Go to Top" accesskey="t"><i class="fa fa-chevron-up fa-2x"></i>TOP</button>
+            </main>
+            <footer>
+                <button type="button" accesskey= "m" class="hamburger" onclick="toggleNav()"><i class="fa fa-bars fa-2x"></i>MENU</button>
+                <ul class="social">
+                    <li><a href="https://www.linkedin.com/in/calin-cionca/" accesskey="l"><i class="fa fa-linkedin fa-lg"></i></a></li>
+                    <li><a href="https://github.com/calincionca35" accesskey="g"><i class="fa fa-github fa-lg"></i></a></li>
+                </ul>
+                <div class="logo">
+                    <a href="#">Calin Cionca</a>
+                </div>
+                <p class="copyRight">&copy;  2018- <span id="copyRightYear">  </span> Calin Cionca</p>
+            </footer>
+        </div><!--End Wrapper -->
+        <script src="js/script.js"></script>
+        <noscript>Your browser does not support JavaScript!</noscript>
+    </body>
+</html>
