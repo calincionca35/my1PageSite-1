@@ -263,6 +263,19 @@ h3 {
     margin-top: auto; /* keeps the link @ bottom of card */
 }
 
+.card2 > a > img {
+    width: 84px;
+    height: 150px;
+}
+
+.card4 > a > img {
+    height: 150px;
+}
+
+.card4 > ul >li:nth-last-of-type(2) {
+    font-weight: 700;
+}
+
 /* To Top */
 #toTop {
     position: fixed;
@@ -442,11 +455,13 @@ footer > .logo {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     }
     .card {
-        width: 50%;
+        width: 46%;
     }
-    #card3 {
+    .card3, .card6 {
         display: none;
     }
     #toTop {
@@ -546,9 +561,9 @@ footer > .logo {
         margin: 10px 20px 0;
     }
     .card {
-        width: 33%;
+        width: 30%;
     }
-    #card3 {
+    .card3, .card6 {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
