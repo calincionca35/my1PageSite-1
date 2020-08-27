@@ -526,7 +526,7 @@ footer > .logo {
         font-weight: 900;
         background-color: #DCDCDC;
     }
-    a::before, a::after {
+    .logo a::before, .logo a::after {
     content: "";
     position: absolute;
     background-color: black;
@@ -540,7 +540,7 @@ footer > .logo {
     transition: transform 250ms ease-in;
     transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
     }
-    a:before {
+    a::before {
         top: 0;
         right: 0;
         -webkit-transform-origin: left;
