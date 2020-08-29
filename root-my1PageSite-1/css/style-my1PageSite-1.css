@@ -42,6 +42,8 @@ header, footer {
 /* HEADER */
 header {
     height: 60px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack:justify;
     -ms-flex-pack:justify;
     justify-content:space-between;
@@ -49,15 +51,13 @@ header {
     -ms-flex-align: center;
     align-items: center;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%
+    width: 100%;
 }
 
 /* LOGO */
 header > .logo {
     margin: 10px 0 10px 5px;
-    width: 100%;
+    width: 45%;
 }
 
 .logo > a {
@@ -77,6 +77,7 @@ header > .logo {
     -ms-flex-align: baseline;
     align-items: center;
     margin: 0 20px 0 0;
+    width: 47%;
 }
 
 label {
@@ -96,6 +97,7 @@ input[name="search"] {
 
 input[name="search"]:focus{
     width: 155px;
+    outline: none;
 }
 
 ::-webkit-input-placeholder {
@@ -114,8 +116,21 @@ input[name="search"]:focus{
 .srcBtn {
     background-color: transparent;
     border: none;
-    margin: 0 0 3px -15px;
+    margin: 0 0 3px -10px;
     padding: 4px;
+}
+
+/*PROGRESS BAR*/
+.barContainer {
+    width: 100%;
+    background-color: darkgray;
+    height: 8px;
+    margin: 0 0 -5px 0;
+}     
+.progressBar {
+    width: 0%;
+    height: 8px;
+    background-color: aqua;
 }
 
 /* MAIN NAV */
@@ -188,7 +203,7 @@ section {
     height: auto;
 }
 
-section > p {
+p {
     font-size: 18px;
     font-weight: 600;
     margin: 10px 20px 0;
@@ -292,7 +307,6 @@ h3 {
 footer {
     padding-top: 10px;
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     height: 105px;
@@ -373,6 +387,9 @@ footer > .logo {
     #wrapper {
         width: 375px;
     }
+    .searchBar {
+        width: 40%;
+    }
 }
 
 @media only screen and (min-width: 375px) and (orientation: landscape) {
@@ -385,11 +402,14 @@ footer > .logo {
     #wrapper {
         width: 425px;
     }
+    .searchBar {
+        width: 35%;
+    }
 }
 
 @media only screen and (min-width: 425px) and (orientation: landscape) {
     .mainLinks {
-        height: 30vh;
+        height: 17vh;
     }
 }
 
@@ -397,6 +417,9 @@ footer > .logo {
 @media only screen and (min-width: 768px) {
     #wrapper {
         width: 768px;
+    }
+    header .logo {
+        width: auto;
     }
     #mainMenu {
         background-color: #BEBEBE;
@@ -406,11 +429,11 @@ footer > .logo {
         top: 0;
         display: block;
         padding: 0;
+        width: 44%;
     }
     .mainLinks {
         height: 60px;
         padding: 0;
-        margin: 0 16px 0 0;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -426,7 +449,7 @@ footer > .logo {
         margin: 0;
     }
     .mainLinks a {
-        font-weight: 500;
+        font-weight: 600;
         padding: 8px 10px;
         color: black;
         font-size: 14px;        
@@ -439,9 +462,18 @@ footer > .logo {
         -ms-flex-order: 3;
         order: 3;
         padding: 0 30px 0 0;
+        width: 20%;
     }
     input[name="search"]:focus{
         width: 165px;
+    }
+    .barContainer {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+        order: 4;
+    }
+    main {
+        margin: 60px 0 90px;
     }
     .mainPic {
         height: 325px;
@@ -466,6 +498,7 @@ footer > .logo {
     }
     #toTop {
         right: 10px;
+        bottom: 75px;
         left: auto; /* clears the placement of the button on the left side */
     }
     /* FOOTER */
@@ -477,6 +510,7 @@ footer > .logo {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+        height: 70px;
     }
     .hamburger {
         display: none;
@@ -513,7 +547,9 @@ footer > .logo {
     }
     header, footer {
         background-color: #E8E8E8; /* 7.22 contrast @ laptop */
-        position: static;
+    }
+    .barContainer {
+        background-color: #E8E8E8;
     }
     .logo {
         padding: 10px;
@@ -521,24 +557,25 @@ footer > .logo {
     .logo > a {
         font-weight: 800;
         position: relative;
+        font-size: 18px;
     }
     .logo > a:hover {
         font-weight: 900;
         background-color: #DCDCDC;
     }
     .logo a::before, .logo a::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 100%;
-    height: 3px;
-    -webkit-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: -webkit-transform 250ms ease-in;
-    transition: -webkit-transform 250ms ease-in;
-    transition: transform 250ms ease-in;
-    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+        content: "";
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 3px;
+        -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: -webkit-transform 250ms ease-in;
+        transition: -webkit-transform 250ms ease-in;
+        transition: transform 250ms ease-in;
+        transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
     }
     a::before {
         top: 0;
@@ -572,19 +609,45 @@ footer > .logo {
     }
     #mainMenu {
         background-color: #E8E8E8; /* 7.22 contrast @ laptop */
+        width: 60%;
     }
     .mainLinks {
         margin: 0 16px 0 375px;
     }
+    .mainLinks li {
+        position: relative;
+        margin: 0 5px;
+        padding-bottom: 2px;
+    }
+    .mainLinks li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 2px;
+        background-color: #00e;
+        -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: 300ms ease-in-out;
+        transition: 300ms ease-in-out;
+    }
+    .mainLinks li a:hover::after {
+        -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1);
+    }
     .mainLinks a {
         font-size: 16px;
+        font-weight: 600;
+        padding: 0;
     }
     .mainLinks a:hover {
         color: #00e;
-        font-weight: 500;
-        text-decoration: underline;
-        -webkit-text-decoration-color: #00e;
-        text-decoration-color: #00e;
+    }
+    .searchBar {
+        width: 15%;
     }
     input[name="search"]:focus{
         width: 140px;
@@ -596,8 +659,8 @@ footer > .logo {
         border-radius: 5px;
     }
     main {
-        margin: 0;
-        padding-bottom: 20px;
+        margin: 70px 0 0 0;
+        padding-bottom: 100px;
     }
     .title {
         font-size: 20px;
@@ -613,29 +676,46 @@ footer > .logo {
         display: -ms-flexbox;
         display: flex;
     }
-    .card >a:first-child {
-        opacity: .8;
-    }
-    .card >a:first-child:hover {
-        opacity: 1;
-    }
     .card > a:hover {
         color: #00e;
         font-weight: 500;
     }
+    .gitHub {
+        display: inline-block;
+        -webkit-transition:  .8s;
+        transition:  .8s;
+    }
+    .gitHub:hover {
+        -webkit-transform: rotateX(360deg);
+        transform: rotateX(360deg);
+    }
     #toTop {
         right: 30px;
+        bottom: 90px;
     }
     #toTop:hover {
         cursor: pointer;
         background-color:#0c0;
         color: #fff;
     }
+    .social > li {
+        -webkit-transition: -webkit-transform .8s ease-in-out;
+        transition: -webkit-transform .8s ease-in-out;
+        transition: transform .8s ease-in-out;
+        transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
+    }
+    .social > li:hover {
+         -webkit-transform: rotateY(360deg);
+         transform: rotateY(360deg);
+    }
     .fa-github:hover {
         color:#040204;
     }
     .fa-linkedin:hover {
         color:#04669A;
+    }
+    footer {
+        height: 90px;
     }
 }
 
