@@ -14,7 +14,7 @@
     </head>
     <body onscroll="toggleTopBtn()">
         <div id="wrapper">
-            <header>
+            <header id="header">
                 <div class="logo">
                     <a href="#" id="home">Calin Cionca</a>
                 </div>
@@ -30,10 +30,13 @@
                         <li class="contact"><a href="#contact" onclick="showPage()">CONTACT</a></li>
                     </ul>
                 </nav>
+                <div class="barContainer">
+                    <div class="progressBar" id="bar"></div>
+                </div>
             </header>
             <main>
-                <h1 class="title">Junior Front-End Web Developer</h1>
                 <section>
+                    <h1 class="title">Junior Front-End Web Developer</h1>
                     <img class="mainPic" src="images/code-1.jpg" alt="code"/>
                     <p>Hi, welcome to my website!</p>
                     <ul>
@@ -77,7 +80,7 @@
                             <a href="https://github.com/calincionca35/Coming-Soon-Page-Dark">More</a>
                         </div>
                         <div class="card">
-                            <a href="http://htmlpreview.github.io/?https://github.com/calincionca35/Under-Construction-Page/blob/master/root-under-construction-1/index-under-construction-1.html"><img src="./images/UnderConstructionPage-1-260X150.jpg" loading="lazy" alt="Under Construction Page"/ ></a>
+                            <a href="http://htmlpreview.github.io/?https://github.com/calincionca35/Under-Construction-Page/blob/master/root-under-construction-1/index-under-construction-1.html"><img src="./images/UnderConstructionPage-1-260X150.jpg" loading="lazy" alt="Under Construction Page"/></a>
                             <h2>Under Construction Page</h2>
                             <ul>
                                 <li>Uses responsive flat UI design, and informs user of construction duration</li>
@@ -107,7 +110,7 @@
                             <a href="https://github.com/calincionca35/Vanilla-JS-Table">More</a>
                         </div>
                     </article>
-                    <p>Additional projects on <a href="https://github.com/calincionca35" accesskey="g">GitHub</a></p>
+                    <p>Additional projects on <a href="https://github.com/calincionca35" class="gitHub" accesskey="g">GitHub</a></p>
                 </section>
                 <button id="toTop" onclick="toTop()" title="Go to Top" accesskey="t"><i class="fa fa-chevron-up fa-2x"></i>TOP</button>
             </main>
