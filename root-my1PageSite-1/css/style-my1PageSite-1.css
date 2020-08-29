@@ -41,7 +41,7 @@ header, footer {
 
 /* HEADER */
 header {
-    height: 60px;
+    height: 67px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack:justify;
@@ -477,7 +477,7 @@ footer > .logo {
         order: 4;
     }
     main {
-        margin: 60px 0 90px;
+        margin: 67px 0 90px;
     }
     .mainPic {
         height: 325px;
