@@ -211,11 +211,6 @@ p {
     margin: 10px 20px 0;
 }
 
-h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
 section > ul {
     margin: 10px 8px 0;
     list-style: square;
@@ -224,6 +219,12 @@ section > ul {
 section > ul > li {
     line-height: 1.3;
     margin: 5px 10px 5px 35px;
+}
+
+.info a {
+    color: #00e;
+    -webkit-text-decoration-color: #00e;
+    text-decoration-color: #00e;
 }
 
 /* PROJECTS SECTION */
@@ -534,6 +535,9 @@ footer > .logo {
         justify-content: flex-end;
         padding-right: 50px;
     }
+    .copyRight {
+        margin: 0;
+    }
 }
 
 
@@ -673,6 +677,14 @@ footer > .logo {
     }
     section > ul {
         margin: 10px 20px 0;
+    }
+    .info a {
+        color: #0F4C81;
+        -webkit-text-decoration-color: #00e;
+        text-decoration-color: #00e;
+    }
+    .info a:hover {
+        color: #00e;
     }
     #cardsWrapper {
         -ms-flex-pack: distribute;
