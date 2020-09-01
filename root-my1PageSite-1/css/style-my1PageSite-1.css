@@ -69,7 +69,6 @@ header > .logo {
     color: #0F4C81;
 }
 
-
 /*Search Bar*/
 .searchBar {
     -ms-flex-pack: distribute;
@@ -273,6 +272,7 @@ h3 {
 }
 
 .card > a:last-child {
+    color: #00e;
     -webkit-text-decoration-color: #00e;
     text-decoration-color: #00e;
     -ms-flex-item-align: end;
@@ -292,6 +292,11 @@ h3 {
 
 .card4 > ul >li:nth-last-of-type(2) {
     font-weight: 700;
+}
+.gitHub {
+    color: #00e;
+    -webkit-text-decoration-color: #00e;
+    text-decoration-color: #00e;
 }
 
 /* To Top */
@@ -506,7 +511,6 @@ footer > .logo {
         bottom: 75px;
         left: auto; /* clears the placement of the button on the left side */
     }
-    /* FOOTER */
     footer {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -557,6 +561,7 @@ footer > .logo {
         background-color: #E8E8E8; /* 7.22 contrast @ laptop */
         left: auto;
         right: auto;
+        z-index: 5;
     }
     .barContainer {
         background-color: #E8E8E8;
@@ -674,6 +679,42 @@ footer > .logo {
     }
     .title {
         font-size: 20px;
+        padding: 8px;
+        position: relative;
+    }
+    .title::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        border-top: 2px solid transparent;
+        border-right: 2px solid transparent;
+    }
+    .title::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        bottom: 0;
+        right: 0;
+        border-bottom: 2px solid transparent;
+        border-left: 2px solid transparent;
+    }
+    .title:hover::before {
+        border-color: #0F4C81;
+        width: 100%;
+        height: 95%;   
+        -webkit-transition: width 100ms linear, height 100ms linear 100ms;   
+        transition: width 100ms linear, height 100ms linear 100ms; 
+    }
+    .title:hover::after {
+        border-color: #0F4C81;
+        width: 100%;
+        height: 95%;  
+        -webkit-transition: width 100ms linear 200ms, height 100ms linear 300ms;  
+        transition: width 100ms linear 200ms, height 100ms linear 300ms;
     }
     section > ul {
         margin: 10px 20px 0;
@@ -698,16 +739,23 @@ footer > .logo {
         display: -ms-flexbox;
         display: flex;
     }
-    .card > a:hover {
+    .card > a:last-child {
+        color: #0F4C81;
+    }
+    .card > a:last-child:hover {
         color: #00e;
         font-weight: 500;
     }
     .gitHub {
+        color: #0F4C81;
+        -webkit-text-decoration-color: #00e;
+        text-decoration-color: #00e;
         display: inline-block;
         -webkit-transition:  .8s;
         transition:  .8s;
     }
     .gitHub:hover {
+        color: #00e;
         -webkit-transform: rotateX(360deg);
         transform: rotateX(360deg);
     }
