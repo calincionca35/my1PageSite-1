@@ -37,6 +37,7 @@ body, wrapper, header, .searchBar, #mainMenu, .mainLinks, main, section, #cardsW
 
 header, footer {
     background-color: #BEBEBE; /* 4.76 contrast @ mobile */
+    z-index: 5;
 }
 
 /* HEADER */
@@ -202,6 +203,46 @@ section {
     padding: 0 20px;
     width: 100%;
     height: auto;
+}
+
+.marquee {
+    height: 30px;
+    width: 255px;
+    overflow: hidden;
+    background-color: #E8E8E8;
+    position: relative;
+}
+
+.marquee p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform:translateX(100%);
+    -ms-transform:translateX(100%);
+    transform:translateX(100%);
+    -webkit-animation: hello 7000ms linear infinite;
+    animation: hello 8000ms linear infinite;
+}
+
+@-webkit-keyframes hello {
+     0%   {
+        -webkit-transform: translateX(100%); transform: translateX(100%); 		
+     }
+     100% {
+     -webkit-transform: translateX(-100%);
+         transform: translateX(-100%); 
+     }
+}
+
+@keyframes hello {
+     0%   {
+         -webkit-transform: translateX(100%);
+         transform: translateX(100%); 		
+     }
+     100% {
+         -webkit-transform: translateX(-100%);
+         transform: translateX(-100%); 
+     }
 }
 
 p {
@@ -489,8 +530,11 @@ footer > .logo {
         height: 325px;
         padding: 0 30px;
     }
+    .marquee {
+        width: 260px;
+    }
     section > ul > li {
-    margin: 5px 10px 5px 45px;
+        margin: 5px 10px 5px 45px;
     } 
     #cardsWrapper {
         -webkit-box-orient: horizontal;
@@ -561,7 +605,6 @@ footer > .logo {
         background-color: #E8E8E8; /* 7.22 contrast @ laptop */
         left: auto;
         right: auto;
-        z-index: 5;
     }
     .barContainer {
         background-color: #E8E8E8;
@@ -715,6 +758,10 @@ footer > .logo {
         height: 95%;  
         -webkit-transition: width 100ms linear 200ms, height 100ms linear 300ms;  
         transition: width 100ms linear 200ms, height 100ms linear 300ms;
+    }
+    .marquee {
+        background-color: #F8F8F8;
+        width: 280px;
     }
     section > ul {
         margin: 10px 20px 0;
